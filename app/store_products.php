@@ -123,7 +123,7 @@ class store_products
         $query .= $orderby;
 
         $result = $conn->query($query);
-       
+
 
         while (list($main_id, $artist_id, $type, $display_name, $name, $launch_date, $remove_date, $description, $available, $price, $euro_price, $dollar_price, $image_format, $disabled_countries, $release_date) = $result->fetch_row()) {
 

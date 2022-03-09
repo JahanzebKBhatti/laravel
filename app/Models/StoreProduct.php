@@ -3,7 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;.
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
@@ -24,7 +24,8 @@ class StoreProduct extends Model
             'id'
         )
             ->withPivot('position')
-            ->orderBy('position', 'ASC');
+            ->withPivot('section_id')
+            ->orderBy('id', 'ASC');
     }
 
     public function artist(): BelongsTo

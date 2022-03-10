@@ -36,7 +36,7 @@ class ProductsController extends Controller
     }
 
     public function index() {
-        $products = StoreProduct::with('sections');
+        $products = StoreProduct::with('sections', 'artist');
 
         return $this->__returnResponse($products, "/products");
     }
